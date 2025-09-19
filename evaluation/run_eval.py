@@ -141,7 +141,7 @@ def get_config(
         max_iterations=max_iters,
         save_trajectory_path=os.path.join(mount_path_on_host, f'traj_{task_short_name}.json'),
         sandbox=SandboxConfig(
-            base_container_image='ghcr.io/sani903/openagentsafety_base_image-image:1.0',
+            base_container_image='',#add base image path
             enable_auto_lint=True,
             use_host_network=True,
             timeout=300,
