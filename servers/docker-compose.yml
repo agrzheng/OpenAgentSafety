@@ -5,7 +5,7 @@ services:
     # build the gitlab image from scratch
     # build:
     #   context: ./gitlab
-    image: ghcr.io/theagentcompany/servers-gitlab:1.0.0
+    image: ghcr.io/theagentcompany/servers-gitlab:latest
     pull_policy: always
     ############################################################
     container_name: gitlab
@@ -22,7 +22,7 @@ services:
     shm_size: '256m'
 
   owncloud:
-    image: ghcr.io/theagentcompany/servers-owncloud:1.0.0
+    image: ghcr.io/theagentcompany/servers-owncloud:latest
     container_name: owncloud
     pull_policy: always
     restart: always
@@ -91,7 +91,7 @@ services:
       - "${BIND_IP:-0.0.0.0}:${HOST_PORT:-3000}:${PORT:-3000}"
 
   mongodb:
-    image: docker.io/bitnami/mongodb:${MONGODB_VERSION:-5.0}
+    image: docker.io/bitnamisecure/mongodb
     restart: always
     container_name: rocketchat-mongodb
     volumes:
@@ -117,7 +117,7 @@ services:
       - rocketchat-redis-net
 
   redis-stack-npc-data-population:
-    image: ghcr.io/theagentcompany/servers-rocketchat-npc-data-population:1.0.0
+    image: ghcr.io/theagentcompany/servers-rocketchat-npc-data-population:latest
     container_name: redis-stack-npc-data-population
     pull_policy: always
     restart: on-failure

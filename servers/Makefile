@@ -157,7 +157,7 @@ start-api-server-with-setup: init
 		--network host \
 		--restart always \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		ghcr.io/theagentcompany/servers-api-server:1.0.0
+		ghcr.io/theagentcompany/servers-api-server:latest
 
 start-api-server: init
 	docker stop api-server || true
@@ -168,7 +168,7 @@ start-api-server: init
 		--restart always \
 		-e SKIP_SETUP=True \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		ghcr.io/theagentcompany/servers-api-server:1.0.0
+		ghcr.io/theagentcompany/servers-api-server:latest
 
 stop-api-server:
 	docker stop api-server || true
@@ -180,15 +180,15 @@ get-ip:
 	curl ifconfig.me
 
 pull-image:
-	docker pull ghcr.io/theagentcompany/servers-api-server:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-rocketchat-npc-data-population:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-owncloud:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-gitlab:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-plane-admin:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-plane-frontend:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-plane-backend:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-plane-space:1.0.0
-	docker pull ghcr.io/theagentcompany/servers-plane-proxy:1.0.0
+	docker pull ghcr.io/theagentcompany/servers-api-server:latest
+	docker pull ghcr.io/theagentcompany/servers-rocketchat-npc-data-population:latest
+	docker pull ghcr.io/theagentcompany/servers-owncloud:latest
+	docker pull ghcr.io/theagentcompany/servers-gitlab:latest
+	docker pull ghcr.io/theagentcompany/servers-plane-admin:latest
+	docker pull ghcr.io/theagentcompany/servers-plane-frontend:latest
+	docker pull ghcr.io/theagentcompany/servers-plane-backend:latest
+	docker pull ghcr.io/theagentcompany/servers-plane-space:latest
+	docker pull ghcr.io/theagentcompany/servers-plane-proxy:latest
 	docker pull minio/minio:RELEASE.2024-11-07T00-52-20Z
 	docker pull collabora/code:24.04.9.2.1
 	docker pull busybox:1.37.0
@@ -196,7 +196,7 @@ pull-image:
 	docker pull valkey/valkey:7.2.5-alpine
 	docker pull redis/redis-stack-server:7.4.0-v0
 	docker pull postgres:15.7-alpine
-	docker pull bitnami/mongodb:5.0
+	docker pull bitnamisecure/mongodb
 	docker pull registry.rocket.chat/rocketchat/rocket.chat:5.3.0
 
 check:

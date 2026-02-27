@@ -30,11 +30,11 @@ docker pull ghcr.io/theagentcompany/servers-api-server:latest
 docker pull ghcr.io/theagentcompany/servers-rocketchat-npc-data-population:latest
 docker pull ghcr.io/theagentcompany/servers-owncloud:latest
 docker pull ghcr.io/theagentcompany/servers-gitlab:latest
-docker pull ghcr.io/theagentcompany/servers-plane-admin:0.0.1
-docker pull ghcr.io/theagentcompany/servers-plane-frontend:0.0.1
-docker pull ghcr.io/theagentcompany/servers-plane-backend:0.0.1
-docker pull ghcr.io/theagentcompany/servers-plane-space:0.0.1
-docker pull ghcr.io/theagentcompany/servers-plane-proxy:0.0.1
+docker pull ghcr.io/theagentcompany/servers-plane-admin:latest
+docker pull ghcr.io/theagentcompany/servers-plane-frontend:latest
+docker pull ghcr.io/theagentcompany/servers-plane-backend:latest
+docker pull ghcr.io/theagentcompany/servers-plane-space:latest
+docker pull ghcr.io/theagentcompany/servers-plane-proxy:latest
 docker pull minio/minio:RELEASE.2024-11-07T00-52-20Z
 docker pull collabora/code:24.04.9.2.1
 docker pull busybox:1.37.0
@@ -42,7 +42,7 @@ docker pull docker:27.3.1
 docker pull valkey/valkey:7.2.5-alpine
 docker pull redis/redis-stack-server:7.4.0-v0
 docker pull postgres:15.7-alpine
-docker pull bitnami/mongodb:5.0
+docker pull bitnamisecure/mongodb
 docker pull registry.rocket.chat/rocketchat/rocket.chat:5.3.0
 
 REM Setup service
